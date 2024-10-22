@@ -20,7 +20,7 @@ const CheckboxWrapper = React.forwardRef<HTMLDivElement, CheckboxWrapperProps>(
 )
 CheckboxWrapper.displayName = 'CheckboxWrapper'
 
-interface CheckboxCheckProps
+export interface CheckboxCheckProps
   extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> {
   title: string
 }

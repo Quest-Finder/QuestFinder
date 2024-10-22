@@ -11,13 +11,7 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
+import { Select } from '@/components/ui/select'
 
 import FormText from '../FormText.json'
 import { FormFirstStep } from '.'
@@ -87,24 +81,24 @@ export function FormStepOne() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Pronome</FormLabel>
-                <Select
+                <Select.Root
                   onValueChange={field.onChange}
                   defaultValue={field.value}
                 >
                   <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder='Selecione uma opção' />
-                    </SelectTrigger>
+                    <Select.Trigger>
+                      <Select.Value placeholder='Selecione uma opção' />
+                    </Select.Trigger>
                   </FormControl>
-                  <SelectContent>
-                    <SelectItem value='he/his'>Ele / Dele</SelectItem>
-                    <SelectItem value='she/her'>Ela / Dela</SelectItem>
-                    <SelectItem value='they/theirs'>Elu / Delu</SelectItem>
-                    <SelectItem value="I don't want to share any pronouns">
+                  <Select.Content>
+                    <Select.Item value='he/his'>Ele / Dele</Select.Item>
+                    <Select.Item value='she/her'>Ela / Dela</Select.Item>
+                    <Select.Item value='they/theirs'>Elu / Delu</Select.Item>
+                    <Select.Item value="I don't want to share any pronouns">
                       Não me sinto confortável em responder
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
+                    </Select.Item>
+                  </Select.Content>
+                </Select.Root>
               </FormItem>
             )}
           />

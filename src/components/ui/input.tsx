@@ -94,8 +94,8 @@ export { Input }
 /* USAGE
 
   <Input
-    statusIcon or statusIcon={Icon}
-    variant="default | info | warning | error | success
+    statusIcon? or statusIcon?={Icon}
+    variant?="default | info | warning | error | success"
     {...props}
   />
 

@@ -46,7 +46,7 @@ export function SignInSocial() {
         <Button
           key={provider.name}
           variant='outline'
-          className='w-full'
+          className='flex-1'
           onClick={() => signInWithSocial(provider.strategy)}
           disabled={!!userId || !!isAuthenticating}
         >

@@ -1,14 +1,7 @@
 import { useFormContext } from 'react-hook-form'
 
 import { FormField, FormLabel } from '@/components/ui/form'
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
+import { Select } from '@/components/ui/select'
 
 import { addressRegistrationValidationT } from '../types/address-registration'
 import { states } from '../utils/estates'
@@ -21,7 +14,7 @@ export default function InputState() {
       name='state'
       control={form.control}
       render={({ field }) => (
-        <Select
+        <Select.Root
           onValueChange={field.onChange}
           defaultValue={field.value}
         >
@@ -31,22 +24,22 @@ export default function InputState() {
             Em qual estado você mora?
           </FormLabel>
 
-          <SelectTrigger className='mt-2 focus-visible:ring-transparent'>
-            <SelectValue placeholder='Selecione seu estado' />
-          </SelectTrigger>
-          <SelectContent className='bg-neutral-50'>
-            <SelectGroup>
+          <Select.Trigger className='mt-2 focus-visible:ring-transparent'>
+            <Select.Value placeholder='Selecione seu estado' />
+          </Select.Trigger>
+          <Select.Content className='bg-neutral-50'>
+            <Select.Group>
               {states.map(option => (
-                <SelectItem
+                <Select.Item
                   key={option.value}
                   value={option.value}
                 >
                   {option.label}
-                </SelectItem>
+                </Select.Item>
               ))}
-            </SelectGroup>
-          </SelectContent>
-        </Select>
+            </Select.Group>
+          </Select.Content>
+        </Select.Root>
       )}
     />
   )

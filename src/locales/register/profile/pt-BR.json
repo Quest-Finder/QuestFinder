@@ -1,0 +1,227 @@
+{
+  "Profile": {
+    "Form": {
+      "buttons": {
+        "clear": "Limpar campos",
+        "submit": "Salvar e Continuar"
+      }
+    }
+  },
+  "User": {
+    "UserPage": {
+      "meta": {
+        "title": "Dados do usuário",
+        "description": "Descrição da página"
+      },
+      "title": "Dados do usuário",
+      "skip": "Prefiro responder em outro momento"
+    },
+    "UserForm": {
+      "name": {
+        "label": "Nome",
+        "placeholder": "Nome completo",
+        "errors": {
+          "required": "O nome é obrigatório.",
+          "fullName": "Preencha seu nome e sobrenome.",
+          "specialCharsAndNumbers": "Caracteres especiais e números não são permitidos.",
+          "badWords": "Palavras de baixo calão não são permitidas."
+        }
+      },
+      "username": {
+        "label": "Username",
+        "placeholder": "seu_username",
+        "errors": {
+          "required": "O username é obrigatório.",
+          "alreadyExists": "Este username já existe.",
+          "specialChars": "Caracteres especiais não são permitidos.",
+          "badWords": "Palavras de baixo calão não são permitidas."
+        }
+      },
+      "interest": {
+        "label": "Qual é o seu interesse na plataforma?",
+        "placeholder": "Selecione uma opção",
+        "options": {
+          "gameMaster": "Mestrar",
+          "player": "Jogar",
+          "gameMasterAndPlayer": "Ambos"
+        }
+      },
+      "pronoun": {
+        "label": "Pronome",
+        "placeholder": "Selecione uma opção",
+        "options": {
+          "he": "Ele / Dele",
+          "she": "Ela / Dela",
+          "they": "Elu / Delu",
+          "notAnswered": "Prefiro não responder"
+        }
+      },
+      "dateOfBirth": {
+        "label": "Data de nascimento",
+        "placeholder": "01/01/2000",
+        "errors": {
+          "minAge": "A idade mínima para se registrar é de 18 anos."
+        }
+      }
+    }
+  },
+  "Social": {
+    "SocialPage": {
+      "meta": {
+        "title": "Redes Sociais",
+        "description": "Descrição da página"
+      },
+      "title": "Redes Sociais",
+      "skip": "Prefiro responder em outro momento"
+    },
+    "SocialForm": {
+      "url": {
+        "label": "Endereço do perfil",
+        "placeholder": "seu_usuario",
+        "errors": {
+          "invalid": "Endereço inválido."
+        }
+      }
+    }
+  },
+  "About": {
+    "AboutPage": {
+      "meta": {
+        "title": "Sobre você",
+        "description": "Descrição da página"
+      },
+      "title": "Sobre você",
+      "skip": "Prefiro responder em outro momento"
+    },
+    "AboutForm": {
+      "title": {
+        "label": "Título",
+        "placeholder": "Exemplo: Jogador combeiro",
+        "errors": {
+          "badWords": "Palavras de baixo calão não são permitidas."
+        }
+      },
+      "bio": {
+        "label": "Bio",
+        "placeholder": "Exemplo: Explorador das terras mágicas de Aldoria, mestre em interpretar personagens épicos e mergulhar em histórias de fantasia medieval. Pronto para embarcar em jornadas de roleplay intensas no mundo dos RPGs de mesa.",
+        "errors": {
+          "badWords": "Palavras de baixo calão não são permitidas."
+        }
+      }
+    }
+  },
+  "Address": {
+    "AddressPage": {
+      "meta": {
+        "title": "Localização",
+        "description": "Descrição da página"
+      },
+      "title": "Conte-nos, bravo aventureiro, em qual reino repousa sua morada?",
+      "skip": "Prefiro responder em outro momento"
+    },
+    "AddressForm": {
+      "state": {
+        "label": "Em qual estado você mora?",
+        "placeholder": "Selecione o estado",
+        "searchPlaceholder": "Buscar estado...",
+        "emptyPlaceholder": "Estado não encontrado"
+      },
+      "city": {
+        "label": "E em qual cidade?",
+        "placeholder": "Selecione a cidade",
+        "searchPlaceholder": "Buscar cidade...",
+        "emptyPlaceholder": "Cidade não encontrada"
+      },
+      "liveAbroad": {
+        "label": "Não moro no Brasil"
+      }
+    }
+  },
+  "GameStyles": {
+    "GameStylesPage": {
+      "meta": {
+        "title": "Estilos de jogo",
+        "description": "Descrição da página"
+      },
+      "title": "Estilos de jogo"
+    },
+    "GameStylesForm": {
+      "options": {
+        "fantasy": {
+          "title": "Fantasia",
+          "description": "Breve texto explicando sobre o estilo aqui."
+        },
+        "heroicFantasy": {
+          "title": "Fantasia Heróica",
+          "description": "Breve texto explicando sobre o estilo aqui."
+        },
+        "ninjaVsSamurai": {
+          "title": "Ninja vs Samurai",
+          "description": "Breve texto explicando sobre o estilo aqui."
+        },
+        "swordAndSorcery": {
+          "title": "Espada e Feitiçaria",
+          "description": "Breve texto explicando sobre o estilo aqui."
+        },
+        "epicFantasy": {
+          "title": "Fantasia Épica",
+          "description": "Breve texto explicando sobre o estilo aqui."
+        },
+        "mysticFantasy": {
+          "title": "Fantasia Mística",
+          "description": "Breve texto explicando sobre o estilo aqui."
+        },
+        "darkFantasy": {
+          "title": "Fantasia Sombria",
+          "description": "Breve texto explicando sobre o estilo aqui."
+        },
+        "intrigue": {
+          "title": "Intriga",
+          "description": "Breve texto explicando sobre o estilo aqui."
+        },
+        "war": {
+          "title": "Guerra",
+          "description": "Breve texto explicando sobre o estilo aqui."
+        },
+        "mothership": {
+          "title": "Nave Mãe",
+          "description": "Breve texto explicando sobre o estilo aqui."
+        }
+      }
+    }
+  },
+  "GameProfile": {
+    "GameProfilePage": {
+      "meta": {
+        "title": "Perfil do usuário",
+        "description": "Descrição da página"
+      },
+      "title": "Perfil do usuário"
+    },
+    "GameProfileForm": {
+      "options": {
+        "exploration": {
+          "title": "Exploração",
+          "description": "Você gosta de conhecer o mundo em que está se aventurando, adora encontrar e explorar dungeons."
+        },
+        "killAndLoot": {
+          "title": "Matar e pilhar",
+          "description": "Para você, a parte mais importante e divertida de uma partida é a hora de rolar dados e distribuir o dano entre seus inimigos."
+        },
+        "rolePlaying": {
+          "title": "Interpretação",
+          "description": "Para você, a ficha e as regras são apenas uma parte do RPG, você gosta de sentir-se na pele de seu personagem."
+        }
+      }
+    }
+  },
+  "SuccessPage": {
+    "meta": {
+      "title": "Parabéns!",
+      "description": "Você desbloqueou a Insígnia do Destino!"
+    },
+    "title": "Parabéns!",
+    "description": "Você desbloqueou a Insígnia do Destino!",
+    "button": "Ir ao dashboard"
+  }
+}

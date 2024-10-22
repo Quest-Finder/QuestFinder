@@ -37,7 +37,7 @@ export default function SignUpPage() {
           </h2>
           <p className='text-lg md:text-2xl'>{ONBOARDING_TEXTS.content}</p>
           <NavButton
-            href={ROUTES.register.player}
+            href={ROUTES.register.profile.user}
             size='lg'
             className='max-md:h-10 max-md:w-full max-md:px-4 max-md:text-base'
           >

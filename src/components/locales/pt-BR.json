@@ -4,6 +4,9 @@
       "light": "Claro",
       "dark": "Escuro",
       "system": "Sistema"
+    },
+    "TextareaWithCounter": {
+      "characters": "caracteres"
     }
   }
 }

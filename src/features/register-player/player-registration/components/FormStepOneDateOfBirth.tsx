@@ -1,12 +1,6 @@
 import { useEffect } from 'react'
 
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
+import { Select } from '@/components/ui/select'
 
 import {
   generateDaysOfAMonth,
@@ -30,68 +24,68 @@ export function DateOfBirth({ onSelectedDate }: DateOfBirthProps) {
 
   return (
     <div className='flex justify-between gap-2'>
-      <Select
+      <Select.Root
         onValueChange={e => handleDay(e)}
         value={dateForm.day}
       >
-        <SelectTrigger className='w-16'>
-          <SelectValue placeholder='Dia' />
-        </SelectTrigger>
-        <SelectContent>
+        <Select.Trigger className='w-16'>
+          <Select.Value placeholder='Dia' />
+        </Select.Trigger>
+        <Select.Content>
           {generateDaysOfAMonth().map(day => {
             return (
-              <SelectItem
+              <Select.Item
                 key={day}
                 value={day.toString()}
               >
                 {day}
-              </SelectItem>
+              </Select.Item>
             )
           })}
-        </SelectContent>
-      </Select>
+        </Select.Content>
+      </Select.Root>
 
-      <Select
+      <Select.Root
         onValueChange={e => handleMonth(e)}
         value={dateForm.month}
       >
-        <SelectTrigger className='w-40'>
-          <SelectValue placeholder='Selecionar mes' />
-        </SelectTrigger>
-        <SelectContent>
+        <Select.Trigger className='w-40'>
+          <Select.Value placeholder='Selecionar mes' />
+        </Select.Trigger>
+        <Select.Content>
           {monthsArray.map(mes => {
             return (
-              <SelectItem
+              <Select.Item
                 key={mes.value}
                 value={mes.value.toString()}
               >
                 {mes.name}
-              </SelectItem>
+              </Select.Item>
             )
           })}
-        </SelectContent>
-      </Select>
+        </Select.Content>
+      </Select.Root>
 
-      <Select
+      <Select.Root
         onValueChange={e => handleYear(e)}
         value={dateForm.yaer}
       >
-        <SelectTrigger className='w-20'>
-          <SelectValue placeholder='Ano' />
-        </SelectTrigger>
-        <SelectContent>
+        <Select.Trigger className='w-20'>
+          <Select.Value placeholder='Ano' />
+        </Select.Trigger>
+        <Select.Content>
           {generateXYearsUntillToday(100).map(ano => {
             return (
-              <SelectItem
+              <Select.Item
                 key={ano}
                 value={ano.toString()}
               >
                 {ano}
-              </SelectItem>
+              </Select.Item>
             )
           })}
-        </SelectContent>
-      </Select>
+        </Select.Content>
+      </Select.Root>
     </div>
   )
 }

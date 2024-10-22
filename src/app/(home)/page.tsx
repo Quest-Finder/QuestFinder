@@ -10,11 +10,9 @@ export default function Home() {
         <NavButton href={ROUTES.auth.signUp}>sign-up</NavButton>
 
         <NavButton href={ROUTES.register.onboarding}>onboarding</NavButton>
-        <NavButton href={ROUTES.register.player}>
-          register player profile
+        <NavButton href={ROUTES.register.profile.user}>
+          register profile
         </NavButton>
-
-        <NavButton href={ROUTES.user.profile}>player profile</NavButton>
 
         <SignOutButton className='mt-8' />
       </div>
