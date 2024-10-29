@@ -6,5 +6,12 @@
   },
   "TextareaWithCounter": {
     "characters": "caracteres"
+  },
+  "PasswordRequirements": {
+    "length": "No mínimo 6 caracteres",
+    "uppercase": "Pelo menos uma letra maiúscula",
+    "lowercase": "Pelo menos uma letra minúscula",
+    "number": "Pelo menos um número",
+    "symbols": "Pelo menos um caractere especial"
   }
 }
