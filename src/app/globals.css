@@ -4,90 +4,98 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%; /* #fafafa Neutral 50 */
-    --background-soft: 0 0% 96%; /* #f5f5f5 Neutral 100 */
-    --background-disabled: 0 0% 83%; /* #d4d4d4 Neutral 300 */
-    --background-hard: 0 0% 100%; /* #ffffff White */
+    --background: 0 0% 98%;             /* #fafafa  Neutral 50  */
+    --background-soft: 0 0% 96%;        /* #f5f5f5  Neutral 100 */
+    --background-disabled: 0 0% 83%;    /* #d4d4d4  Neutral 300 */
+    --background-hard: 0 0% 100%;       /* #ffffff  White       */
 
-    --foreground: 0 0% 15%; /* #262626 Neutral 800 */
-    --foreground-support: 0 0% 64%; /* #a3a3a3 Neutral 400 */
-    --foreground-soft: 0 0% 32%; /* #525252 Neutral 600 */
-    --foreground-hard: 0 0% 4%; /* #0a0a0a Neutral 950 */
-    --foreground-accent: 0 0% 100%; /* #ffffff White */
+    --foreground: 0 0% 15%;             /* #262626  Neutral 800 */
+    --foreground-support: 0 0% 64%;     /* #a3a3a3  Neutral 400 */
+    --foreground-soft: 0 0% 32%;        /* #525252  Neutral 600 */
+    --foreground-hard: 0 0% 4%;         /* #0a0a0a  Neutral 950 */
+    --foreground-accent: 0 0% 100%;     /* #ffffff  White       */
 
-    --primary: 262 83% 58%; /* #7c3aed Violet 600 */
-    --primary-soft: 255 92% 76%; /* #a78bfa Violet 400 */
-    --primary-hard: 263 69% 42%; /* #5b21b6 Violet 800 */
-    --primary-foreground: 0 0% 100%; /* #ffffff White */
+    --primary: 262 83% 58%;             /* #7c3aed  Violet 600  */
+    --primary-soft: 255 92% 76%;        /* #a78bfa  Violet 400  */
+    --primary-hard: 263 69% 42%;        /* #5b21b6  Violet 800  */
+    --primary-foreground: 0 0% 100%;    /* #ffffff  White       */
 
-    --secondary: 175 84% 32%; /* #0d9488 Teal 600 */
-    --secondary-soft: 172 66% 50%; /* #2dd4bf Teal 400 */
-    --secondary-hard: 176 69% 22%; /* #115e59 Teal 800 */
-    --secondary-foreground: 0 0% 100%; /* #ffffff White */
+    --secondary: 175 84% 32%;           /* #0d9488  Teal 600    */
+    --secondary-soft: 172 66% 50%;      /* #2dd4bf  Teal 400    */
+    --secondary-hard: 176 69% 22%;      /* #115e59  Teal 800    */
+    --secondary-foreground: 0 0% 100%;  /* #ffffff  White       */
 
     /* labels */
-    --player: 255 92% 76%; /* #a78bfa Violet 400 */
-    --player-soft: 251 91% 95%; /* #ede9fe Violet 100 */
-    --player-hard: 261 73% 23%; /* #2e1065 Violet 950 */
-    --master: 172 66% 50%; /* #2dd4bf Teal 400 */
-    --master-soft: 167 85% 89%; /* #ccfbf1 Teal 100 */
-    --master-hard: 179 84% 10%; /* #042f2e Teal 950 */
+    --player: 255 92% 76%;              /* #a78bfa  Violet 400  */
+    --player-soft: 251 91% 95%;         /* #ede9fe  Violet 100  */
+    --player-hard: 261 73% 23%;         /* #2e1065  Violet 950  */
+    --master: 172 66% 50%;              /* #2dd4bf  Teal 400    */
+    --master-soft: 167 85% 89%;         /* #ccfbf1  Teal 100    */
+    --master-hard: 179 84% 10%;         /* #042f2e  Teal 950    */
 
-    --warning: 41 96% 40%; /* #ca8a04 Yellow 600 */
-    --warning-soft: 48 96% 53%; /* #facc15 Yellow 400 */
-    --warning-hard: 32 81% 29%; /* #854d0e Yellow 800 */
+    --warning: 41 96% 40%;              /* #ca8a04  Yellow 600  */
+    --warning-soft: 48 96% 53%;         /* #facc15  Yellow 400  */
+    --warning-hard: 32 81% 29%;         /* #854d0e  Yellow 800  */
 
-    --info: 221 83% 53%; /* #2563eb Blue 600 */
-    --info-soft: 213 94% 68%; /* #60a5fa Blue 400 */
-    --info-hard: 226 71% 40%; /* #1e40af Blue 800 */
+    --info: 221 83% 53%;                /* #2563eb  Blue 600    */
+    --info-soft: 213 94% 68%;           /* #60a5fa  Blue 400    */
+    --info-hard: 226 71% 40%;           /* #1e40af  Blue 800    */
 
-    --error: 0 72% 51%; /* #dc2626 Red 600 */
-    --error-soft: 0 91% 71%; /* #f87171 Red 400 */
-    --error-hard: 0 70% 35%; /* #991b1b Red 800 */
+    --error: 0 72% 51%;                 /* #dc2626  Red 600     */
+    --error-softer: 0 96% 89%;          /* #fecaca  Red 200     */
+    --error-soft: 0 91% 71%;            /* #f87171  Red 400     */
+    --error-hard: 0 70% 35%;            /* #991b1b  Red 800     */
+    --error-harder: 0 63% 31%;          /* #7f1d1d  Red 900     */
 
-    --success: 142 76% 36%; /* #16a34a Green 600 */
-    --success-soft: 142 69% 58%; /* #4ade80 Green 400 */
-    --success-hard: 143 64% 24%; /* #166534 Green 800 */
+    --success: 142 76% 36%;             /* #16a34a  Green 600   */
+    --success-softer: 141 79% 85%;      /* #bbf7d0  Green 200   */
+    --success-soft: 142 69% 58%;        /* #4ade80  Green 400   */
+    --success-hard: 143 64% 24%;        /* #166534  Green 800   */
+    --success-harder: 144 61% 20%;      /* #14532d  Green 900   */
 
-    --border: 0 0% 90%; /* #e5e5e5 Neutral 200 */
-    --border-hard: 0 0% 64%; /* #a1a1aa Neutral 400 */
+    --border: 0 0% 90%;                 /* #e5e5e5  Neutral 200 */
+    --border-hard: 0 0% 64%;            /* #a1a1aa  Neutral 400 */
 
-    --ring: 263 69% 42%; /* #5b21b6 Violet 800 */
+    --ring: 263 69% 42%;                /* #5b21b6  Violet 800  */
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 0 0% 9%; /* #171717 Neutral 900 */
-    --background-soft: 0 0% 15%; /* #262626 Neutral 800 */
-    --background-disabled: 0 0% 25%; /* #404040 Neutral 700 */
-    --background-hard: 0 0% 4%; /* #0a0a0a Neutral 950 */
+    --background: 0 0% 9%;              /* #171717  Neutral 900 */
+    --background-soft: 0 0% 15%;        /* #262626  Neutral 800 */
+    --background-disabled: 0 0% 25%;    /* #404040  Neutral 700 */
+    --background-hard: 0 0% 4%;         /* #0a0a0a  Neutral 950 */
 
-    --foreground: 0 0% 90%; /* #e5e5e5 Neutral 200 */
-    --foreground-support: 0 0% 45%; /* #737373 Neutral 500 */
-    --foreground-soft: 0 0% 64%; /* #a3a3a3 Neutral 400 */
-    --foreground-hard: 0 0% 98%; /* #fafafa Neutral 50 */
+    --foreground: 0 0% 90%;             /* #e5e5e5  Neutral 200 */
+    --foreground-support: 0 0% 45%;     /* #737373  Neutral 500 */
+    --foreground-soft: 0 0% 64%;        /* #a3a3a3  Neutral 400 */
+    --foreground-hard: 0 0% 98%;        /* #fafafa  Neutral 50  */
 
-    --warning: 41 96% 40%; /* #ca8a04 Yellow 600 */
-    --warning-soft: 32 81% 29%; /* #854d0e Yellow 800 */
-    --warning-hard: 48 96% 53%; /* #facc15 Yellow 400 */
+    --warning: 41 96% 40%;              /* #ca8a04  Yellow 600  */
+    --warning-soft: 32 81% 29%;         /* #854d0e  Yellow 800  */
+    --warning-hard: 48 96% 53%;         /* #facc15  Yellow 400  */
 
-    --info: 221 83% 53%; /* #2563eb Blue 600 */
-    --info-soft: 226 71% 40%; /* #1e40af Blue 800 */
-    --info-hard: 213 94% 68%; /* #60a5fa Blue 400 */
+    --info: 221 83% 53%;                /* #2563eb  Blue 600    */
+    --info-soft: 226 71% 40%;           /* #1e40af  Blue 800    */
+    --info-hard: 213 94% 68%;           /* #60a5fa  Blue 400    */
 
-    --error: 0 72% 51%; /* #dc2626 Red 600 */
-    --error-soft: 0 70% 35%; /* #991b1b Red 800 */
-    --error-hard: 0 91% 71%; /* #f87171 Red 400 */
+    --error: 0 72% 51%;                 /* #dc2626  Red 600     */
+    --error-softer: 0 63% 31%;          /* #7f1d1d  Red 900     */
+    --error-soft: 0 70% 35%;            /* #991b1b  Red 800     */
+    --error-hard: 0 91% 71%;            /* #f87171  Red 400     */
+    --error-harder: 0 94% 82%;          /* #fca5a5  Red 300     */
 
-    --success: 142 76% 36%; /* #16a34a Green 600 */
-    --success-soft: 143 64% 24%; /* #166534 Green 800 */
-    --success-hard: 142 69% 58%; /* #4ade80 Green 400 */
+    --success: 142 76% 36%;             /* #16a34a  Green 600   */
+    --success-softer: 144 61% 20%;      /* #14532d  Green 900   */
+    --success-soft: 143 64% 24%;        /* #166534  Green 800   */
+    --success-hard: 142 69% 58%;        /* #4ade80  Green 400   */
+    --success-harder: 142 77% 73%;      /* #86efac  Green 300   */
 
-    --border: 0 0% 25%; /* #404040 Neutral 700 */
-    --border-hard: 0 0% 32%; /* #525252 Neutral 600 */
+    --border: 0 0% 25%;                 /* #404040  Neutral 700 */
+    --border-hard: 0 0% 32%;            /* #525252  Neutral 600 */
 
-    --ring: 262 83% 58%; /* #7c3aed Violet 600 */
+    --ring: 262 83% 58%;                /* #7c3aed  Violet 600  */
   }
 }
 

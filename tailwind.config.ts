@@ -79,13 +79,17 @@ const config = {
         },
         error: {
           DEFAULT: 'hsl(var(--error))',
+          softer: 'hsl(var(--error-softer))',
           soft: 'hsl(var(--error-soft))',
           hard: 'hsl(var(--error-hard))',
+          harder: 'hsl(var(--error-harder))',
         },
         success: {
           DEFAULT: 'hsl(var(--success))',
+          softer: 'hsl(var(--success-softer))',
           soft: 'hsl(var(--success-soft))',
           hard: 'hsl(var(--success-hard))',
+          harder: 'hsl(var(--success-harder))',
         },
         border: {
           DEFAULT: 'hsl(var(--border))',
