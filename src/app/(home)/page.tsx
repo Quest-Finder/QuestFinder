@@ -8,6 +8,9 @@ export default function Home() {
       <div className='flex flex-col items-center gap-3'>
         <NavButton href={ROUTES.auth.signIn}>sign-in</NavButton>
         <NavButton href={ROUTES.auth.signUp}>sign-up</NavButton>
+        <NavButton href={ROUTES.auth.recoverPassword}>
+          recover password
+        </NavButton>
 
         <NavButton href={ROUTES.register.onboarding}>onboarding</NavButton>
         <NavButton href={ROUTES.register.profile.user}>

@@ -1,0 +1,83 @@
+{
+	"RecoverPassword": {
+		"RecoverPasswordPage": {
+			"meta": {
+				"title": "Recupere sua senha",
+				"description": "Esqueceu sua senha? Siga as instruções para recuperá-la."
+			},
+			"imageAlt": "Uma taverna mística iluminada por luzes azuis, roxas e amareladas. Dentro dela há banquetas, balcões e teto de madeira, e paredes de pedra.",
+			"signInLink": "Faça login",
+			"title": "Recuperar a senha",
+			"description": "Informe o seu e-mail registrado na plataforma para receber as instruções de recuperação da senha."
+		},
+		"RecoverPasswordForm": {
+			"email": {
+				"label": "E-mail",
+				"placeholder": "Digite seu e-mail",
+				"messages": {
+					"required": "O e-mail é obrigatório.",
+					"invalid": "Verifique se seu e-mail está correto."
+				}
+			},
+			"submit": {
+				"default": "Enviar",
+				"pending": "Enviando..."
+			},
+			"messages": {
+				"sent": "Instruções enviadas para o seu e-mail.",
+				"errors": {
+					"default": "Ocorreu um erro."
+				}
+			}
+		}
+	},
+	"NewPassword": {
+		"NewPasswordPage": {
+			"meta": {
+				"title": "Cadastre sua nova senha",
+				"description": "Cadastre uma nova senha para acessar sua conta."
+			},
+			"imageAlt": "Uma taverna mística iluminada por luzes azuis, roxas e amareladas. Dentro dela há banquetas, balcões e teto de madeira, e paredes de pedra.",
+			"title": "Cadastrar nova senha",
+			"signInLink": "Faça login"
+		},
+		"NewPasswordForm": {
+			"password": {
+				"label": "Senha",
+				"placeholder": "Digite sua senha",
+				"showButton": "Mostrar senha",
+				"description": "Sua senha deve conter:",
+				"requirements": {
+					"length": "No mínimo 6 caracteres",
+					"uppercase": "Pelo menos uma letra maiúscula",
+					"lowercase": "Pelo menos uma letra minúscula",
+					"number": "Pelo menos um número",
+					"symbols": "Pelo menos um caractere especial"
+				},
+				"messages": {
+					"required": "A senha é obrigatória.",
+					"weak": "Sua senha não está forte o bastante.",
+					"warning": "Sua senha está quase forte. Continue tentando!",
+					"sucess": "Sua senha está forte como um guerreiro!"
+				}
+			},
+			"passwordConfirmation": {
+				"label": "Confirme sua senha",
+				"placeholder": "Repita sua senha",
+				"errors": {
+					"mismatch": "Suas senhas não estão iguais, tente novamente."
+				}
+			},
+			"submit": {
+				"default": "Cadastrar",
+				"pending": "Cadastrando..."
+			},
+			"messages": {
+				"success": "Nova senha cadastrada com sucesso.",
+				"errors": {
+					"default": "Ocorreu um erro."
+				}
+			}
+		}
+	}
+}
