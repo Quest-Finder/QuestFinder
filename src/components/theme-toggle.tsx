@@ -4,11 +4,12 @@ import { Monitor, Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import * as React from 'react'
 
-import texts from './locales/pt-BR.json'
+import { COMPONENT_TEXTS } from '@/locales'
+
 import { Button } from './ui/button'
 import { DropdownMenu } from './ui/dropdown-menu'
 
-const THEME_TOGGLE_TEXTS = texts.Components.ThemeToggle
+const themeToggleTexts = COMPONENT_TEXTS.ThemeToggle
 
 export function ThemeToggle() {
   const { setTheme } = useTheme()
@@ -29,15 +30,15 @@ export function ThemeToggle() {
       <DropdownMenu.Content align='start'>
         <DropdownMenu.Item onClick={() => setTheme('light')}>
           <Sun className='size-3' />
-          {THEME_TOGGLE_TEXTS.light}
+          {themeToggleTexts.light}
         </DropdownMenu.Item>
         <DropdownMenu.Item onClick={() => setTheme('dark')}>
           <Moon className='size-3' />
-          {THEME_TOGGLE_TEXTS.dark}
+          {themeToggleTexts.dark}
         </DropdownMenu.Item>
         <DropdownMenu.Item onClick={() => setTheme('system')}>
           <Monitor className='size-3' />
-          {THEME_TOGGLE_TEXTS.system}
+          {themeToggleTexts.system}
         </DropdownMenu.Item>
       </DropdownMenu.Content>
     </DropdownMenu.Root>
