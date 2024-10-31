@@ -4,24 +4,24 @@ import { useForm } from 'react-hook-form'
 
 import {
   checkPasswordRequirements,
-  defaultValues,
-  type FormSchema,
-  formSchema,
   getPasswordStatus,
-} from '../_helpers'
-import texts from '../locales/pt-BR.json'
+  signUpDefaultValues,
+  type SignUpFormSchema,
+  signUpFormSchema,
+} from '@/helpers/auth'
+import { SIGN_UP_TEXTS } from '@/locales'
 
 export function useSignUpForm() {
-  const SIGN_UP_FORM_TEXTS = texts.SignUpForm
+  const formTexts = SIGN_UP_TEXTS.SignUpForm
 
   const [successMessage, setSuccessMessage] = useState('')
   const [showPassword, setShowPassword] = useState(false)
   const [showPasswordConfirmation, setShowPasswordConfirmation] =
     useState(false)
 
-  const form = useForm<FormSchema>({
-    resolver: zodResolver(formSchema),
-    defaultValues,
+  const form = useForm<SignUpFormSchema>({
+    resolver: zodResolver(signUpFormSchema),
+    defaultValues: signUpDefaultValues,
     mode: 'onBlur',
   })
 
@@ -41,7 +41,7 @@ export function useSignUpForm() {
   const passwordRequirements = checkPasswordRequirements(passwordValue)
   const { isValid: isFormValid, isSubmitting } = form.formState
 
-  function signUpWithEmail({ email, consent }: FormSchema): void {
+  function signUpWithEmail({ email, consent }: SignUpFormSchema): void {
     if (!consent) {
       return
     }
@@ -58,7 +58,7 @@ export function useSignUpForm() {
 
     form.setError('root', {
       type: 'api_error',
-      message: SIGN_UP_FORM_TEXTS.messages.alreadyRegistered,
+      message: formTexts.messages.errors.alreadyRegistered,
     })
     form.setFocus('email')
   }

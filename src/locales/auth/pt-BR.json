@@ -39,6 +39,69 @@
     }
   }
 	},
+	"SignUp": {
+		"SignUpPage": {
+			"meta": {
+				"title": "Crie sua conta",
+				"description": "Entre num mundo de diversão e aventura!"
+			},
+			"imageAlt": "Uma taverna mística iluminada por luzes azuis, roxas e amareladas. Dentro dela há banquetas, balcões e teto de madeira, e paredes de pedra.",
+			"signInLink": "Faça login",
+			"hasAccount": "Já tem uma conta?",
+			"title": "Entre num mundo de diversão e aventura!"
+		},
+		"SignUpForm": {
+			"email": {
+				"label": "E-mail",
+				"placeholder": "Digite seu e-mail",
+				"messages": {
+					"required": "O e-mail é obrigatório.",
+					"invalid": "Verifique se seu e-mail está correto."
+				}
+			},
+			"password": {
+				"label": "Senha",
+				"placeholder": "Digite sua senha",
+				"showButton": "Mostrar senha",
+				"description": "Sua senha deve conter:",
+				"requirements": {
+					"length": "No mínimo 6 caracteres",
+					"uppercase": "Pelo menos uma letra maiúscula",
+					"lowercase": "Pelo menos uma letra minúscula",
+					"number": "Pelo menos um número",
+					"symbols": "Pelo menos um caractere especial"
+				},
+				"messages": {
+					"required": "A senha é obrigatória.",
+					"weak": "Sua senha não está forte o bastante.",
+					"warning": "Sua senha está quase forte. Continue tentando!",
+					"sucess": "Sua senha está forte como um guerreiro!"
+				}
+			},
+			"passwordConfirmation": {
+				"label": "Confirme sua senha",
+				"placeholder": "Repita sua senha",
+				"errors": {
+					"mismatch": "Suas senhas não estão iguais, tente novamente. "
+				}
+			},
+			"consent": {
+				"title": "Consentir",
+				"statement": "Ao criar a conta, eu concordo com os Termos e Condições e a Política de Privacidade da plataforma.",
+				"error": "Você deve consentir para criar sua conta."
+			},
+			"submit": {
+				"default": "Criar minha conta",
+				"pending": "Criando..."
+			},
+			"messages": {
+				"errors": {
+					"default": "Um erro inesperado ocorreu. Por favor, tente novamente.",
+					"alreadyRegistered": "O e-mail informado já está cadastrado. Por favor, insira um novo e-mail."
+				}
+			}
+    }
+	},
 	"RecoverPassword": {
 		"RecoverPasswordPage": {
 			"meta": {

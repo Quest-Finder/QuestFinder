@@ -1,4 +1,10 @@
 export {
+  signUpFormSchema,
+  signUpDefaultValues,
+  type SignUpFormSchema,
+} from './sign-up-form-validation'
+
+export {
   signInFormSchema,
   signInDefaultValues,
   type SignInFormSchema,

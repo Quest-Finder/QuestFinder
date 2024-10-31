@@ -8,15 +8,15 @@ import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Input } from '@/components/ui/input'
 import { ShowAndHideButton } from '@/components/ui/show-and-hide-button'
+import { PASSWORD_MIN_LENGTH } from '@/helpers/auth'
+import { useSignUpForm } from '@/hooks/auth'
+import { SIGN_UP_TEXTS } from '@/locales'
 
-import { MIN_PASSWORD_LENGTH } from '../_helpers/sign-up-form-validation'
-import { useSignUpForm } from '../_hooks/use-sign-up-form'
-import texts from '../locales/pt-BR.json'
 import { PasswordRequirements } from './password-requirements'
 
-const SIGN_UP_TEXTS = texts.SignUpForm
-
 export function SignUpForm() {
+  const formTexts = SIGN_UP_TEXTS.SignUpForm
+
   const {
     successMessage,
     showPassword,
@@ -42,7 +42,7 @@ export function SignUpForm() {
           control={form.control}
           render={({ field }) => (
             <Form.Item>
-              <Form.Label>{SIGN_UP_TEXTS.email.label}</Form.Label>
+              <Form.Label>{formTexts.email.label}</Form.Label>
               <Form.Control>
                 <Input
                   statusIcon
@@ -50,7 +50,7 @@ export function SignUpForm() {
                   inputMode='email'
                   autoComplete='email'
                   variant={emailError && 'error'}
-                  placeholder={SIGN_UP_TEXTS.email.placeholder}
+                  placeholder={formTexts.email.placeholder}
                   {...field}
                 />
               </Form.Control>
@@ -64,16 +64,16 @@ export function SignUpForm() {
           control={form.control}
           render={({ field }) => (
             <Form.Item>
-              <Form.Label>{SIGN_UP_TEXTS.password.label}</Form.Label>
+              <Form.Label>{formTexts.password.label}</Form.Label>
               <div className='relative'>
                 <Form.Control>
                   <Input
                     type={showPassword ? 'text' : 'password'}
                     variant={passwordStatus}
-                    placeholder={SIGN_UP_TEXTS.password.placeholder}
+                    placeholder={formTexts.password.placeholder}
                     className='pr-10'
                     {...field}
-                    // Override default behaviour to validate on "onChange"
+                    // Override default behaviour to validate on "onChange".
                     onChange={e => {
                       field.onChange(e)
                       form.trigger('password')
@@ -81,14 +81,14 @@ export function SignUpForm() {
                   />
                 </Form.Control>
                 <ShowAndHideButton
-                  title={SIGN_UP_TEXTS.password.showButton}
+                  title={formTexts.password.showButton}
                   show={showPassword}
                   onClick={() => setShowPassword(!showPassword)}
                 />
               </div>
               {passwordStatus === 'success' ? (
                 <Form.Message variant='success'>
-                  {SIGN_UP_TEXTS.password.messages.sucess}
+                  {formTexts.password.messages.sucess}
                 </Form.Message>
               ) : (
                 <Form.Message variant={passwordStatus} />
@@ -97,7 +97,7 @@ export function SignUpForm() {
                 as='div'
                 className='space-y-1 text-xs'
               >
-                <p>{SIGN_UP_TEXTS.password.description}</p>
+                <p>{formTexts.password.description}</p>
                 <PasswordRequirements requirements={passwordRequirements} />
               </Form.Description>
             </Form.Item>
@@ -109,28 +109,26 @@ export function SignUpForm() {
           control={form.control}
           render={({ field }) => (
             <Form.Item>
-              <Form.Label>
-                {SIGN_UP_TEXTS.passwordConfirmation.label}
-              </Form.Label>
+              <Form.Label>{formTexts.passwordConfirmation.label}</Form.Label>
               <div className='relative'>
                 <Form.Control>
                   <Input
                     type={showPasswordConfirmation ? 'text' : 'password'}
                     variant={passwordConfirmationError && 'error'}
-                    placeholder={SIGN_UP_TEXTS.passwordConfirmation.placeholder}
+                    placeholder={formTexts.passwordConfirmation.placeholder}
                     className='pr-10'
                     {...field}
-                    // Override default behaviour to validate on "onChange" and trigger it only after value reaches the minimum length
+                    // Override default behaviour to validate on "onChange" and trigger it only after value reaches the minimum length.
                     onChange={e => {
                       field.onChange(e)
-                      if (e.target.value.length >= MIN_PASSWORD_LENGTH) {
+                      if (e.target.value.length >= PASSWORD_MIN_LENGTH) {
                         form.trigger('password_confirmation')
                       }
                     }}
                   />
                 </Form.Control>
                 <ShowAndHideButton
-                  title={SIGN_UP_TEXTS.password.showButton}
+                  title={formTexts.password.showButton}
                   show={showPasswordConfirmation}
                   onClick={() =>
                     setShowPasswordConfirmation(!showPasswordConfirmation)
@@ -150,13 +148,13 @@ export function SignUpForm() {
               <Checkbox.Wrapper>
                 <Form.Control>
                   <Checkbox.Check
-                    title={SIGN_UP_TEXTS.consent.title}
+                    title={formTexts.consent.title}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                   />
                 </Form.Control>
                 <Form.Label type='checkbox'>
-                  {SIGN_UP_TEXTS.consent.statement}
+                  {formTexts.consent.statement}
                 </Form.Label>
               </Checkbox.Wrapper>
               <Form.Message />
@@ -184,10 +182,10 @@ export function SignUpForm() {
           {isSubmitting ? (
             <>
               <Loader2 className='size-5 animate-spin' />
-              {SIGN_UP_TEXTS.submit.pending}
+              {formTexts.submit.pending}
             </>
           ) : (
-            SIGN_UP_TEXTS.submit.default
+            formTexts.submit.default
           )}
         </Button>
       </Form.Wrapper>

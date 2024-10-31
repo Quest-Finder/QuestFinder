@@ -5,17 +5,16 @@ import { redirect } from 'next/navigation'
 import { isAuthenticated } from '@/actions/auth'
 import logo from '@/assets/branding/logo-short.svg'
 import signUpImage from '@/assets/images/sign-up-image.jpg'
+import { SignUpForm } from '@/components/auth'
 import { NavLink } from '@/components/ui/nav-link'
 import { ROUTES } from '@/constants'
+import { SIGN_UP_TEXTS } from '@/locales'
 
-import { SignUpForm } from './_components/sign-up-form'
-import texts from './locales/pt-BR.json'
-
-const SIGN_UP_PAGE_TEXTS = texts.SignUpPage
+const pageTexts = SIGN_UP_TEXTS.SignUpPage
 
 export const metadata: Metadata = {
-  title: SIGN_UP_PAGE_TEXTS.meta.title,
-  description: SIGN_UP_PAGE_TEXTS.meta.description,
+  title: pageTexts.meta.title,
+  description: pageTexts.meta.description,
 }
 
 export default async function SignUpPage() {
@@ -28,7 +27,7 @@ export default async function SignUpPage() {
       <div className='relative overflow-hidden bg-primary max-md:h-96 max-sm:h-48 md:flex-1'>
         <Image
           src={signUpImage}
-          alt={SIGN_UP_PAGE_TEXTS.imageAlt}
+          alt={pageTexts.imageAlt}
           className='absolute size-full object-cover'
           placeholder='blur'
           priority
@@ -42,15 +41,13 @@ export default async function SignUpPage() {
             className='w-28'
           />
           <div className='text-sm'>
-            {SIGN_UP_PAGE_TEXTS.hasAccount}{' '}
-            <NavLink href={ROUTES.auth.signIn}>
-              {SIGN_UP_PAGE_TEXTS.signInLink}
-            </NavLink>
+            {pageTexts.hasAccount}{' '}
+            <NavLink href={ROUTES.auth.signIn}>{pageTexts.signInLink}</NavLink>
           </div>
         </header>
 
         <h1 className='text-center text-3xl font-bold text-foreground-hard max-sm:text-center'>
-          {SIGN_UP_PAGE_TEXTS.title}
+          {pageTexts.title}
         </h1>
 
         <SignUpForm />
