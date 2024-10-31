@@ -1,4 +1,10 @@
 export {
+  signInFormSchema,
+  signInDefaultValues,
+  type SignInFormSchema,
+} from './sign-in-form-validation'
+
+export {
   recoverPasswordFormSchema,
   recoverPasswordDefaultValues,
   type RecoverPasswordFormSchema,

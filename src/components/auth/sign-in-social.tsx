@@ -10,8 +10,7 @@ import facebookIcon from '@/assets/icons/facebook.svg'
 import googleIcon from '@/assets/icons/google.svg'
 import twitchIcon from '@/assets/icons/twitch.svg'
 import { Button } from '@/components/ui/button'
-
-import { useSignInSocial } from '../_hooks/use-sign-in-social'
+import { useSignInSocial } from '@/hooks/auth'
 
 export function SignInSocial() {
   const { isAuthenticating, signInWithSocial } = useSignInSocial()

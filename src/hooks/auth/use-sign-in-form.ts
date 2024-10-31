@@ -5,16 +5,15 @@ import { useForm } from 'react-hook-form'
 
 import { createSession } from '@/actions/auth'
 import { getRedirectPathAfterSignIn } from '@/helpers'
-
 import {
   signInDefaultValues,
   type SignInFormSchema,
   signInFormSchema,
-} from '../_helpers/sign-in-form-validation'
-import texts from '../locales/pt-BR.json'
+} from '@/helpers/auth'
+import { SIGN_IN_TEXTS } from '@/locales'
 
 export function useSignInForm() {
-  const SIGN_IN_FORM_TEXTS = texts.SignInForm
+  const formTexts = SIGN_IN_TEXTS.SignInForm
 
   const [showPassword, setShowPassword] = useState(false)
 
@@ -81,7 +80,7 @@ export function useSignInForm() {
 
     form.setError('root', {
       type: 'api_error',
-      message: SIGN_IN_FORM_TEXTS.messages.defaultError,
+      message: formTexts.messages.errors.default,
     })
     form.setFocus('email')
   }

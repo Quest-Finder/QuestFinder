@@ -7,13 +7,12 @@ import { Alert } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { ShowAndHideButton } from '@/components/ui/show-and-hide-button'
-
-import { useSignInForm } from '../_hooks/use-sign-in-form'
-import texts from '../locales/pt-BR.json'
-
-const SIGN_IN_FORM_TEXTS = texts.SignInForm
+import { useSignInForm } from '@/hooks/auth'
+import { SIGN_IN_TEXTS } from '@/locales'
 
 export function SignInForm() {
+  const formTexts = SIGN_IN_TEXTS.SignInForm
+
   const {
     showPassword,
     setShowPassword,
@@ -34,7 +33,7 @@ export function SignInForm() {
           control={form.control}
           render={({ field }) => (
             <Form.Item>
-              <Form.Label>{SIGN_IN_FORM_TEXTS.email.label}</Form.Label>
+              <Form.Label>{formTexts.email.label}</Form.Label>
               <Form.Control>
                 <Input
                   statusIcon
@@ -42,7 +41,7 @@ export function SignInForm() {
                   inputMode='email'
                   autoComplete='email'
                   variant={emailError && 'error'}
-                  placeholder={SIGN_IN_FORM_TEXTS.email.placeholder}
+                  placeholder={formTexts.email.placeholder}
                   {...field}
                 />
               </Form.Control>
@@ -56,19 +55,19 @@ export function SignInForm() {
           control={form.control}
           render={({ field }) => (
             <Form.Item>
-              <Form.Label>{SIGN_IN_FORM_TEXTS.password.label}</Form.Label>
+              <Form.Label>{formTexts.password.label}</Form.Label>
               <div className='relative'>
                 <Form.Control>
                   <Input
                     type={showPassword ? 'text' : 'password'}
                     variant={passwordError && 'error'}
-                    placeholder={SIGN_IN_FORM_TEXTS.password.placeholder}
+                    placeholder={formTexts.password.placeholder}
                     className='pr-10'
                     {...field}
                   />
                 </Form.Control>
                 <ShowAndHideButton
-                  title={SIGN_IN_FORM_TEXTS.password.showButton}
+                  title={formTexts.password.showButton}
                   show={showPassword}
                   onClick={() => setShowPassword(!showPassword)}
                 />
@@ -92,10 +91,10 @@ export function SignInForm() {
           {isSubmitting ? (
             <>
               <Loader2 className='size-5 animate-spin' />
-              {SIGN_IN_FORM_TEXTS.submit.pending}
+              {formTexts.submit.pending}
             </>
           ) : (
-            SIGN_IN_FORM_TEXTS.submit.default
+            formTexts.submit.default
           )}
         </Button>
       </Form.Wrapper>
