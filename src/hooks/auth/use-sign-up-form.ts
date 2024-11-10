@@ -1,10 +1,10 @@
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 
+import { useToast } from '@/components/ui/toast'
+import { ROUTES } from '@/constants'
 import {
-  checkPasswordRequirements,
-  getPasswordStatus,
   signUpDefaultValues,
   type SignUpFormSchema,
   signUpFormSchema,
@@ -14,10 +14,8 @@ import { SIGN_UP_TEXTS } from '@/locales'
 export function useSignUpForm() {
   const formTexts = SIGN_UP_TEXTS.SignUpForm
 
-  const [successMessage, setSuccessMessage] = useState('')
-  const [showPassword, setShowPassword] = useState(false)
-  const [showPasswordConfirmation, setShowPasswordConfirmation] =
-    useState(false)
+  const router = useRouter()
+  const { toast } = useToast()
 
   const form = useForm<SignUpFormSchema>({
     resolver: zodResolver(signUpFormSchema),
@@ -25,21 +23,20 @@ export function useSignUpForm() {
     mode: 'onBlur',
   })
 
-  const passwordValue = form.watch('password')
-
   const {
-    email: emailError,
-    password: passwordError,
-    password_confirmation: passwordConfirmationError,
-    root: formError,
-  } = form.formState.errors
+    isValid: isFormValid,
+    isSubmitting,
+    errors: {
+      email: emailError,
+      password: passwordError,
+      password_confirmation: passwordConfirmationError,
+      root: formError,
+    },
+  } = form.formState
 
-  const passwordStatus = getPasswordStatus({
-    value: passwordValue,
-    error: passwordError,
-  })
-  const passwordRequirements = checkPasswordRequirements(passwordValue)
-  const { isValid: isFormValid, isSubmitting } = form.formState
+  function triggerOnChange(field: keyof SignUpFormSchema) {
+    form.trigger(field)
+  }
 
   function signUpWithEmail({ email, consent }: SignUpFormSchema): void {
     if (!consent) {
@@ -47,12 +44,12 @@ export function useSignUpForm() {
     }
 
     // TODO: integrate with API when it's ready.
-
     // The code below is just an example. It'll be changed when the endpoint is available.
 
     if (email === 'sucesso@teste.com') {
-      setSuccessMessage('Mensagem de sucesso apenas para teste')
+      toast({ variant: 'success', title: formTexts.messages.success })
       form.reset()
+      router.push(ROUTES.auth.signIn)
       return
     }
 
@@ -64,20 +61,14 @@ export function useSignUpForm() {
   }
 
   return {
-    successMessage,
-    setSuccessMessage,
-    showPassword,
-    setShowPassword,
-    showPasswordConfirmation,
-    setShowPasswordConfirmation,
     form,
-    passwordRequirements,
     emailError,
+    passwordError,
     passwordConfirmationError,
     formError,
-    passwordStatus,
     isFormValid,
     isSubmitting,
+    triggerOnChange,
     signUpWithEmail,
   }
 }

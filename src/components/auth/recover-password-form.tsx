@@ -1,13 +1,12 @@
 'use client'
 
-import { Loader2 } from 'lucide-react'
-
 import { Form } from '@/components/form'
 import { Alert } from '@/components/ui/alert'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
 import { useRecoverPasswordForm } from '@/hooks/auth'
 import { RECOVER_PASSWORD_TEXTS } from '@/locales'
+
+import { EmailField } from './_components/email-field'
+import { SubmitButton } from './_components/submit-button'
 
 export function RecoverPasswordForm() {
   const formTexts = RECOVER_PASSWORD_TEXTS.RecoverPasswordForm
@@ -18,8 +17,8 @@ export function RecoverPasswordForm() {
     formError,
     isFormValid,
     isSubmitting,
-    sendRecoverEmail,
     successMessage,
+    sendRecoverEmail,
   } = useRecoverPasswordForm()
 
   return (
@@ -32,21 +31,12 @@ export function RecoverPasswordForm() {
           name='email'
           control={form.control}
           render={({ field }) => (
-            <Form.Item>
-              <Form.Label>{formTexts.email.label}</Form.Label>
-              <Form.Control>
-                <Input
-                  statusIcon
-                  type='email'
-                  inputMode='email'
-                  autoComplete='email'
-                  variant={emailError && 'error'}
-                  placeholder={formTexts.email.placeholder}
-                  {...field}
-                />
-              </Form.Control>
-              <Form.Message />
-            </Form.Item>
+            <EmailField
+              field={field}
+              label={formTexts.email.label}
+              placeholder={formTexts.email.placeholder}
+              error={emailError}
+            />
           )}
         />
 
@@ -65,20 +55,12 @@ export function RecoverPasswordForm() {
           </Alert.Root>
         )}
 
-        <Button
-          type='submit'
-          className='mt-4 w-full md:mt-auto'
-          disabled={!isFormValid || isSubmitting}
-        >
-          {isSubmitting ? (
-            <>
-              <Loader2 className='size-5 animate-spin' />
-              {formTexts.submit.pending}
-            </>
-          ) : (
-            formTexts.submit.default
-          )}
-        </Button>
+        <SubmitButton
+          isFormValid={isFormValid}
+          isPending={isSubmitting}
+          defaultText={formTexts.submit.default}
+          pendingText={formTexts.submit.pending}
+        />
       </Form.Wrapper>
     </Form.Root>
   )

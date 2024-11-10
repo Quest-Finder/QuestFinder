@@ -1,4 +1,7 @@
 {
+  "ShowAndHideButton": {
+    "title": "Mostrar ou Ocultar"
+  },
   "ThemeToggle": {
     "light": "Claro",
     "dark": "Escuro",

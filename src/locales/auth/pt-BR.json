@@ -1,43 +1,43 @@
 {
 	"SignIn": {
 		"SignInPage": {
-    "meta": {
-      "title": "Acesse sua conta",
-      "description": "Entre num mundo de diversão e aventura!"
-    },
-    "notRegistered": "Não tem uma conta?",
-    "signUpLink": "Crie sua conta",
-    "title": "Acesse sua conta para continuar sua jornada!",
-    "imageAlt": "Uma taverna mística iluminada por luzes azuis, roxas e amareladas. Dentro dela há banquetas, balcões e teto de madeira, e paredes de pedra.",
-    "continueWith": "Ou continue com"
-  },
-  "SignInForm": {
-    "email": {
-      "label": "E-mail",
-      "placeholder": "Digite seu e-mail",
-      "messages": {
-        "required": "O e-mail é obrigatório.",
-        "invalid": "Verifique se seu e-mail está correto."
-      }
-    },
-    "password": {
-      "label": "Senha",
-      "placeholder": "Digite sua senha",
-      "showButton": "Mostrar senha",
-      "messages": {
-        "required": "A senha é obrigatória."
-      }
-    },
-    "submit": {
-      "default": "Acessar minha conta",
-      "pending": "Acessando..."
-    },
-    "messages": {
-			"errors": {
+			"meta": {
+				"title": "Acesse sua conta",
+				"description": "Entre num mundo de diversão e aventura!"
+			},
+			"notRegistered": "Não tem uma conta?",
+			"signUpLink": "Crie sua conta",
+			"title": "Acesse sua conta para continuar sua jornada!",
+			"imageAlt": "Uma taverna mística iluminada por luzes azuis, roxas e amareladas. Dentro dela há banquetas, balcões e teto de madeira, e paredes de pedra.",
+			"continueWith": "Ou continue com"
+		},
+		"SignInForm": {
+			"email": {
+				"label": "E-mail",
+				"placeholder": "Digite seu e-mail",
+				"messages": {
+					"required": "O e-mail é obrigatório.",
+					"invalid": "Verifique se seu e-mail está correto."
+				}
+			},
+			"password": {
+				"label": "Senha",
+				"placeholder": "Digite sua senha",
+				"showButton": "Mostrar senha",
+				"messages": {
+					"required": "A senha é obrigatória."
+				}
+			},
+			"submit": {
+				"default": "Acessar minha conta",
+				"pending": "Acessando..."
+			},
+			"messages": {
+				"errors": {
 					"default": "Um erro inesperado ocorreu. Por favor, tente novamente."
 				}
-    }
-  }
+			}
+		}
 	},
 	"SignUp": {
 		"SignUpPage": {
@@ -95,12 +95,13 @@
 				"pending": "Criando..."
 			},
 			"messages": {
+				"success": "Sua conta foi registrada com sucesso.",
 				"errors": {
 					"default": "Um erro inesperado ocorreu. Por favor, tente novamente.",
 					"alreadyRegistered": "O e-mail informado já está cadastrado. Por favor, insira um novo e-mail."
 				}
 			}
-    }
+		}
 	},
 	"RecoverPassword": {
 		"RecoverPasswordPage": {
@@ -127,7 +128,7 @@
 				"pending": "Enviando..."
 			},
 			"messages": {
-				"sent": "Instruções enviadas para o seu e-mail.",
+				"success": "Instruções para recuperação enviadas para o seu e-mail.",
 				"errors": {
 					"default": "Ocorreu um erro."
 				}

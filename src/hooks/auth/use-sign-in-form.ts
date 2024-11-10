@@ -1,6 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 import { createSession } from '@/actions/auth'
@@ -15,8 +14,6 @@ import { SIGN_IN_TEXTS } from '@/locales'
 export function useSignInForm() {
   const formTexts = SIGN_IN_TEXTS.SignInForm
 
-  const [showPassword, setShowPassword] = useState(false)
-
   const queryParams = useSearchParams()
   const redirectPath = queryParams.get('redirect_url')
   const router = useRouter()
@@ -27,19 +24,17 @@ export function useSignInForm() {
     mode: 'onBlur',
   })
 
-  const { isValid: isFormValid, isSubmitting } = form.formState
   const {
-    email: emailError,
-    password: passwordError,
-    root: formError,
-  } = form.formState.errors
+    isValid: isFormValid,
+    isSubmitting,
+    errors: { email: emailError, password: passwordError, root: formError },
+  } = form.formState
 
   async function signInWithEmail({
     email,
     password,
   }: SignInFormSchema): Promise<void> {
     // TODO: integrate with API when it's ready.
-
     // The code below is just an example. It'll be changed when the endpoint is available.
 
     const sampleUser = {
@@ -86,8 +81,6 @@ export function useSignInForm() {
   }
 
   return {
-    showPassword,
-    setShowPassword,
     form,
     emailError,
     passwordError,

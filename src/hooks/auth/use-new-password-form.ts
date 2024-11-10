@@ -1,13 +1,10 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/navigation'
-import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 import { useToast } from '@/components/ui/toast'
 import { ROUTES } from '@/constants'
 import {
-  checkPasswordRequirements,
-  getPasswordStatus,
   newPasswordDefaultValues,
   type NewPasswordFormSchema,
   newPasswordFormSchema,
@@ -17,12 +14,8 @@ import { NEW_PASSWORD_TEXTS } from '@/locales'
 export function useNewPasswordForm() {
   const formTexts = NEW_PASSWORD_TEXTS.NewPasswordForm
 
-  const [showPassword, setShowPassword] = useState(false)
-  const [showPasswordConfirmation, setShowPasswordConfirmation] =
-    useState(false)
-
-  const { toast } = useToast()
   const router = useRouter()
+  const { toast } = useToast()
 
   const form = useForm<NewPasswordFormSchema>({
     resolver: zodResolver(newPasswordFormSchema),
@@ -30,26 +23,24 @@ export function useNewPasswordForm() {
     mode: 'onBlur',
   })
 
-  const passwordValue = form.watch('password')
-
-  const { isValid: isFormValid, isSubmitting } = form.formState
   const {
-    password: passwordError,
-    password_confirmation: passwordConfirmationError,
-    root: formError,
-  } = form.formState.errors
+    isValid: isFormValid,
+    isSubmitting,
+    errors: {
+      password: passwordError,
+      password_confirmation: passwordConfirmationError,
+      root: formError,
+    },
+  } = form.formState
 
-  const passwordStatus = getPasswordStatus({
-    value: passwordValue,
-    error: passwordError,
-  })
-  const passwordRequirements = checkPasswordRequirements(passwordValue)
+  function triggerOnChange(field: keyof NewPasswordFormSchema) {
+    form.trigger(field)
+  }
 
   async function saveNewPassword({
     password,
   }: NewPasswordFormSchema): Promise<void> {
     // TODO: integrate with API when it's ready.
-
     // The code below is just an example. It'll be changed when the endpoint is available.
 
     if (password === 'Teste123#') {
@@ -70,17 +61,13 @@ export function useNewPasswordForm() {
   }
 
   return {
-    showPassword,
-    setShowPassword,
-    showPasswordConfirmation,
-    setShowPasswordConfirmation,
     form,
-    passwordRequirements,
-    passwordConfirmationError,
     formError,
-    passwordStatus,
+    passwordError,
+    passwordConfirmationError,
     isFormValid,
     isSubmitting,
+    triggerOnChange,
     saveNewPassword,
   }
 }

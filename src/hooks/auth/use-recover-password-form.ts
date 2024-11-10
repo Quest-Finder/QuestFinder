@@ -20,18 +20,20 @@ export function useRecoverPasswordForm() {
     mode: 'onBlur',
   })
 
-  const { isValid: isFormValid, isSubmitting } = form.formState
-  const { email: emailError, root: formError } = form.formState.errors
+  const {
+    isValid: isFormValid,
+    isSubmitting,
+    errors: { email: emailError, root: formError },
+  } = form.formState
 
   async function sendRecoverEmail({
     email,
   }: RecoverPasswordFormSchema): Promise<void> {
     // TODO: integrate with API when it's ready.
-
     // The code below is just an example. It'll be changed when the endpoint is available.
 
     if (email === 'sucesso@teste.com') {
-      setSuccessMessage('E-mail enviado com sucesso.')
+      setSuccessMessage(formTexts.messages.success)
       form.reset()
       return
     }
@@ -49,7 +51,7 @@ export function useRecoverPasswordForm() {
     formError,
     isFormValid,
     isSubmitting,
-    sendRecoverEmail,
     successMessage,
+    sendRecoverEmail,
   }
 }

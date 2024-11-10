@@ -1,21 +1,16 @@
 'use client'
 
-import { Loader2 } from 'lucide-react'
-
 import { Form } from '@/components/form'
 import { Alert } from '@/components/ui/alert'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { ShowAndHideButton } from '@/components/ui/show-and-hide-button'
 import { useSignInForm } from '@/hooks/auth'
 import { SIGN_IN_TEXTS } from '@/locales'
+
+import { EmailField, PasswordField, SubmitButton } from './_components'
 
 export function SignInForm() {
   const formTexts = SIGN_IN_TEXTS.SignInForm
 
   const {
-    showPassword,
-    setShowPassword,
     form,
     emailError,
     passwordError,
@@ -32,21 +27,12 @@ export function SignInForm() {
           name='email'
           control={form.control}
           render={({ field }) => (
-            <Form.Item>
-              <Form.Label>{formTexts.email.label}</Form.Label>
-              <Form.Control>
-                <Input
-                  statusIcon
-                  type='email'
-                  inputMode='email'
-                  autoComplete='email'
-                  variant={emailError && 'error'}
-                  placeholder={formTexts.email.placeholder}
-                  {...field}
-                />
-              </Form.Control>
-              <Form.Message />
-            </Form.Item>
+            <EmailField
+              field={field}
+              label={formTexts.email.label}
+              placeholder={formTexts.email.placeholder}
+              error={emailError}
+            />
           )}
         />
 
@@ -54,26 +40,12 @@ export function SignInForm() {
           name='password'
           control={form.control}
           render={({ field }) => (
-            <Form.Item>
-              <Form.Label>{formTexts.password.label}</Form.Label>
-              <div className='relative'>
-                <Form.Control>
-                  <Input
-                    type={showPassword ? 'text' : 'password'}
-                    variant={passwordError && 'error'}
-                    placeholder={formTexts.password.placeholder}
-                    className='pr-10'
-                    {...field}
-                  />
-                </Form.Control>
-                <ShowAndHideButton
-                  title={formTexts.password.showButton}
-                  show={showPassword}
-                  onClick={() => setShowPassword(!showPassword)}
-                />
-              </div>
-              <Form.Message />
-            </Form.Item>
+            <PasswordField
+              field={field}
+              label={formTexts.password.label}
+              placeholder={formTexts.password.placeholder}
+              error={passwordError}
+            />
           )}
         />
 
@@ -83,20 +55,12 @@ export function SignInForm() {
           </Alert.Root>
         )}
 
-        <Button
-          type='submit'
-          className='mt-4 w-full'
-          disabled={!isFormValid || isSubmitting}
-        >
-          {isSubmitting ? (
-            <>
-              <Loader2 className='size-5 animate-spin' />
-              {formTexts.submit.pending}
-            </>
-          ) : (
-            formTexts.submit.default
-          )}
-        </Button>
+        <SubmitButton
+          isFormValid={isFormValid}
+          isPending={isSubmitting}
+          defaultText={formTexts.submit.default}
+          pendingText={formTexts.submit.pending}
+        />
       </Form.Wrapper>
     </Form.Root>
   )
