@@ -1,187 +1,187 @@
 {
-	"SignIn": {
-		"SignInPage": {
-			"meta": {
-				"title": "Acesse sua conta",
-				"description": "Entre num mundo de diversão e aventura!"
-			},
-			"notRegistered": "Não tem uma conta?",
-			"signUpLink": "Crie sua conta",
-			"title": "Acesse sua conta para continuar sua jornada!",
-			"imageAlt": "Uma taverna mística iluminada por luzes azuis, roxas e amareladas. Dentro dela há banquetas, balcões e teto de madeira, e paredes de pedra.",
-			"continueWith": "Ou continue com"
-		},
-		"SignInForm": {
-			"email": {
-				"label": "E-mail",
-				"placeholder": "Digite seu e-mail",
-				"messages": {
-					"required": "O e-mail é obrigatório.",
-					"invalid": "Verifique se seu e-mail está correto."
-				}
-			},
-			"password": {
-				"label": "Senha",
-				"placeholder": "Digite sua senha",
-				"showButton": "Mostrar senha",
-				"messages": {
-					"required": "A senha é obrigatória."
-				}
-			},
-			"submit": {
-				"default": "Acessar minha conta",
-				"pending": "Acessando..."
-			},
-			"messages": {
-				"errors": {
-					"default": "Um erro inesperado ocorreu. Por favor, tente novamente."
-				}
-			}
-		}
-	},
-	"SignUp": {
-		"SignUpPage": {
-			"meta": {
-				"title": "Crie sua conta",
-				"description": "Entre num mundo de diversão e aventura!"
-			},
-			"imageAlt": "Uma taverna mística iluminada por luzes azuis, roxas e amareladas. Dentro dela há banquetas, balcões e teto de madeira, e paredes de pedra.",
-			"signInLink": "Faça login",
-			"hasAccount": "Já tem uma conta?",
-			"title": "Entre num mundo de diversão e aventura!"
-		},
-		"SignUpForm": {
-			"email": {
-				"label": "E-mail",
-				"placeholder": "Digite seu e-mail",
-				"messages": {
-					"required": "O e-mail é obrigatório.",
-					"invalid": "Verifique se seu e-mail está correto."
-				}
-			},
-			"password": {
-				"label": "Senha",
-				"placeholder": "Digite sua senha",
-				"showButton": "Mostrar senha",
-				"description": "Sua senha deve conter:",
-				"requirements": {
-					"length": "No mínimo 6 caracteres",
-					"uppercase": "Pelo menos uma letra maiúscula",
-					"lowercase": "Pelo menos uma letra minúscula",
-					"number": "Pelo menos um número",
-					"symbols": "Pelo menos um caractere especial"
-				},
-				"messages": {
-					"required": "A senha é obrigatória.",
-					"weak": "Sua senha não está forte o bastante.",
-					"warning": "Sua senha está quase forte. Continue tentando!",
-					"sucess": "Sua senha está forte como um guerreiro!"
-				}
-			},
-			"passwordConfirmation": {
-				"label": "Confirme sua senha",
-				"placeholder": "Repita sua senha",
-				"errors": {
-					"mismatch": "Suas senhas não estão iguais, tente novamente. "
-				}
-			},
-			"consent": {
-				"title": "Consentir",
-				"statement": "Ao criar a conta, eu concordo com os Termos e Condições e a Política de Privacidade da plataforma.",
-				"error": "Você deve consentir para criar sua conta."
-			},
-			"submit": {
-				"default": "Criar minha conta",
-				"pending": "Criando..."
-			},
-			"messages": {
-				"success": "Sua conta foi registrada com sucesso.",
-				"errors": {
-					"default": "Um erro inesperado ocorreu. Por favor, tente novamente.",
-					"alreadyRegistered": "O e-mail informado já está cadastrado. Por favor, insira um novo e-mail."
-				}
-			}
-		}
-	},
-	"RecoverPassword": {
-		"RecoverPasswordPage": {
-			"meta": {
-				"title": "Recupere sua senha",
-				"description": "Esqueceu sua senha? Siga as instruções para recuperá-la."
-			},
-			"imageAlt": "Uma taverna mística iluminada por luzes azuis, roxas e amareladas. Dentro dela há banquetas, balcões e teto de madeira, e paredes de pedra.",
-			"signInLink": "Faça login",
-			"title": "Recuperar a senha",
-			"description": "Informe o seu e-mail registrado na plataforma para receber as instruções de recuperação da senha."
-		},
-		"RecoverPasswordForm": {
-			"email": {
-				"label": "E-mail",
-				"placeholder": "Digite seu e-mail",
-				"messages": {
-					"required": "O e-mail é obrigatório.",
-					"invalid": "Verifique se seu e-mail está correto."
-				}
-			},
-			"submit": {
-				"default": "Enviar",
-				"pending": "Enviando..."
-			},
-			"messages": {
-				"success": "Instruções para recuperação enviadas para o seu e-mail.",
-				"errors": {
-					"default": "Ocorreu um erro."
-				}
-			}
-		}
-	},
-	"NewPassword": {
-		"NewPasswordPage": {
-			"meta": {
-				"title": "Cadastre sua nova senha",
-				"description": "Cadastre uma nova senha para acessar sua conta."
-			},
-			"imageAlt": "Uma taverna mística iluminada por luzes azuis, roxas e amareladas. Dentro dela há banquetas, balcões e teto de madeira, e paredes de pedra.",
-			"title": "Cadastrar nova senha",
-			"signInLink": "Faça login"
-		},
-		"NewPasswordForm": {
-			"password": {
-				"label": "Senha",
-				"placeholder": "Digite sua senha",
-				"showButton": "Mostrar senha",
-				"description": "Sua senha deve conter:",
-				"requirements": {
-					"length": "No mínimo 6 caracteres",
-					"uppercase": "Pelo menos uma letra maiúscula",
-					"lowercase": "Pelo menos uma letra minúscula",
-					"number": "Pelo menos um número",
-					"symbols": "Pelo menos um caractere especial"
-				},
-				"messages": {
-					"required": "A senha é obrigatória.",
-					"weak": "Sua senha não está forte o bastante.",
-					"warning": "Sua senha está quase forte. Continue tentando!",
-					"sucess": "Sua senha está forte como um guerreiro!"
-				}
-			},
-			"passwordConfirmation": {
-				"label": "Confirme sua senha",
-				"placeholder": "Repita sua senha",
-				"errors": {
-					"mismatch": "Suas senhas não estão iguais, tente novamente."
-				}
-			},
-			"submit": {
-				"default": "Cadastrar",
-				"pending": "Cadastrando..."
-			},
-			"messages": {
-				"success": "Nova senha cadastrada com sucesso.",
-				"errors": {
-					"default": "Ocorreu um erro."
-				}
-			}
-		}
-	}
+  "SignIn": {
+    "SignInPage": {
+      "meta": {
+        "title": "Acesse sua conta",
+        "description": "Entre num mundo de diversão e aventura!"
+      },
+      "notRegistered": "Não tem uma conta?",
+      "signUpLink": "Crie sua conta",
+      "title": "Acesse sua conta para continuar sua jornada!",
+      "imageAlt": "Uma taverna mística iluminada por luzes azuis, roxas e amareladas. Dentro dela há banquetas, balcões e teto de madeira, e paredes de pedra.",
+      "continueWith": "Ou continue com"
+    },
+    "SignInForm": {
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Digite seu e-mail",
+        "messages": {
+          "required": "O e-mail é obrigatório.",
+          "invalid": "Verifique se seu e-mail está correto."
+        }
+      },
+      "password": {
+        "label": "Senha",
+        "placeholder": "Digite sua senha",
+        "showButton": "Mostrar senha",
+        "messages": {
+          "required": "A senha é obrigatória."
+        }
+      },
+      "submit": {
+        "default": "Acessar minha conta",
+        "pending": "Acessando..."
+      },
+      "messages": {
+        "errors": {
+          "default": "Um erro inesperado ocorreu. Por favor, tente novamente."
+        }
+      }
+    }
+  },
+  "SignUp": {
+    "SignUpPage": {
+      "meta": {
+        "title": "Crie sua conta",
+        "description": "Entre num mundo de diversão e aventura!"
+      },
+      "imageAlt": "Uma taverna mística iluminada por luzes azuis, roxas e amareladas. Dentro dela há banquetas, balcões e teto de madeira, e paredes de pedra.",
+      "signInLink": "Faça login",
+      "hasAccount": "Já tem uma conta?",
+      "title": "Entre num mundo de diversão e aventura!"
+    },
+    "SignUpForm": {
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Digite seu e-mail",
+        "messages": {
+          "required": "O e-mail é obrigatório.",
+          "invalid": "Verifique se seu e-mail está correto."
+        }
+      },
+      "password": {
+        "label": "Senha",
+        "placeholder": "Digite sua senha",
+        "showButton": "Mostrar senha",
+        "description": "Sua senha deve conter:",
+        "requirements": {
+          "length": "No mínimo 6 caracteres",
+          "uppercase": "Pelo menos uma letra maiúscula",
+          "lowercase": "Pelo menos uma letra minúscula",
+          "number": "Pelo menos um número",
+          "symbols": "Pelo menos um caractere especial"
+        },
+        "messages": {
+          "required": "A senha é obrigatória.",
+          "weak": "Sua senha não está forte o bastante.",
+          "warning": "Sua senha está quase forte. Continue tentando!",
+          "sucess": "Sua senha está forte como um guerreiro!"
+        }
+      },
+      "passwordConfirmation": {
+        "label": "Confirme sua senha",
+        "placeholder": "Repita sua senha",
+        "errors": {
+          "mismatch": "Suas senhas não estão iguais, tente novamente. "
+        }
+      },
+      "consent": {
+        "title": "Consentir",
+        "statement": "Ao criar a conta, eu concordo com os Termos e Condições e a Política de Privacidade da plataforma.",
+        "error": "Você deve consentir para criar sua conta."
+      },
+      "submit": {
+        "default": "Criar minha conta",
+        "pending": "Criando..."
+      },
+      "messages": {
+        "success": "Sua conta foi registrada com sucesso.",
+        "errors": {
+          "default": "Um erro inesperado ocorreu. Por favor, tente novamente.",
+          "alreadyRegistered": "O e-mail informado já está cadastrado. Por favor, insira um novo e-mail."
+        }
+      }
+    }
+  },
+  "RecoverPassword": {
+    "RecoverPasswordPage": {
+      "meta": {
+        "title": "Recupere sua senha",
+        "description": "Esqueceu sua senha? Siga as instruções para recuperá-la."
+      },
+      "imageAlt": "Uma taverna mística iluminada por luzes azuis, roxas e amareladas. Dentro dela há banquetas, balcões e teto de madeira, e paredes de pedra.",
+      "signInLink": "Faça login",
+      "title": "Recuperar a senha",
+      "description": "Informe o seu e-mail registrado na plataforma para receber as instruções de recuperação da senha."
+    },
+    "RecoverPasswordForm": {
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Digite seu e-mail",
+        "messages": {
+          "required": "O e-mail é obrigatório.",
+          "invalid": "Verifique se seu e-mail está correto."
+        }
+      },
+      "submit": {
+        "default": "Enviar",
+        "pending": "Enviando..."
+      },
+      "messages": {
+        "success": "Instruções para recuperação enviadas para o seu e-mail.",
+        "errors": {
+          "default": "Ocorreu um erro."
+        }
+      }
+    }
+  },
+  "NewPassword": {
+    "NewPasswordPage": {
+      "meta": {
+        "title": "Cadastre sua nova senha",
+        "description": "Cadastre uma nova senha para acessar sua conta."
+      },
+      "imageAlt": "Uma taverna mística iluminada por luzes azuis, roxas e amareladas. Dentro dela há banquetas, balcões e teto de madeira, e paredes de pedra.",
+      "title": "Cadastrar nova senha",
+      "signInLink": "Faça login"
+    },
+    "NewPasswordForm": {
+      "password": {
+        "label": "Senha",
+        "placeholder": "Digite sua senha",
+        "showButton": "Mostrar senha",
+        "description": "Sua senha deve conter:",
+        "requirements": {
+          "length": "No mínimo 6 caracteres",
+          "uppercase": "Pelo menos uma letra maiúscula",
+          "lowercase": "Pelo menos uma letra minúscula",
+          "number": "Pelo menos um número",
+          "symbols": "Pelo menos um caractere especial"
+        },
+        "messages": {
+          "required": "A senha é obrigatória.",
+          "weak": "Sua senha não está forte o bastante.",
+          "warning": "Sua senha está quase forte. Continue tentando!",
+          "sucess": "Sua senha está forte como um guerreiro!"
+        }
+      },
+      "passwordConfirmation": {
+        "label": "Confirme sua senha",
+        "placeholder": "Repita sua senha",
+        "errors": {
+          "mismatch": "Suas senhas não estão iguais, tente novamente."
+        }
+      },
+      "submit": {
+        "default": "Cadastrar",
+        "pending": "Cadastrando..."
+      },
+      "messages": {
+        "success": "Nova senha cadastrada com sucesso.",
+        "errors": {
+          "default": "Ocorreu um erro."
+        }
+      }
+    }
+  }
 }
