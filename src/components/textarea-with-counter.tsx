@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { cn } from '@/lib/utils'
+import { COMPONENT_TEXTS } from '@/locales'
 
-import texts from './locales/pt-BR.json'
 import { Textarea, type TextareaProps } from './ui/textarea'
 
 export interface TextareaWithCounterProps extends TextareaProps {
@@ -13,7 +13,7 @@ const TextareaWithCounter = React.forwardRef<
   HTMLTextAreaElement,
   TextareaWithCounterProps
 >(({ maxLength, value, className, ...props }, ref) => {
-  const TEXTAREA_TEXTS = texts.Components.TextareaWithCounter
+  const textareaTexts = COMPONENT_TEXTS.TextareaWithCounter
   const currentLength = value?.toLocaleString().length ?? 0
 
   return (
@@ -27,8 +27,8 @@ const TextareaWithCounter = React.forwardRef<
       />
       <span className='absolute bottom-2 right-3 text-sm text-foreground-soft peer-disabled:opacity-50'>
         {maxLength
-          ? `${currentLength}/${maxLength} ${TEXTAREA_TEXTS.characters}`
-          : `${currentLength} ${TEXTAREA_TEXTS.characters}`}
+          ? `${currentLength}/${maxLength} ${textareaTexts.characters}`
+          : `${currentLength} ${textareaTexts.characters}`}
       </span>
     </div>
   )

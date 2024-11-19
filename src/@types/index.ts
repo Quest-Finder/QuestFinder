@@ -1,4 +1,9 @@
-export { type Session, type OAuthStrategy, OAUTH_STRATEGY } from './auth'
+export {
+  type PasswordRequirementType,
+  type Session,
+  type OAuthStrategy,
+  OAUTH_STRATEGY,
+} from './auth'
 
 export {
   GAME_PROFILE_TYPES,

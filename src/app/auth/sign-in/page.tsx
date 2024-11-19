@@ -5,18 +5,16 @@ import { redirect } from 'next/navigation'
 import { isAuthenticated } from '@/actions/auth'
 import logo from '@/assets/branding/logo-short.svg'
 import signInImage from '@/assets/images/sign-in-image.jpg'
+import { SignInForm, SignInSocial } from '@/components/auth'
 import { NavLink } from '@/components/ui/nav-link'
 import { ROUTES } from '@/constants'
+import { SIGN_IN_TEXTS } from '@/locales'
 
-import { SignInForm } from './_components/sign-in-form'
-import { SignInSocial } from './_components/sign-in-social'
-import texts from './locales/pt-BR.json'
-
-const SIGN_IN_PAGE_TEXTS = texts.SignInPage
+const pageTexts = SIGN_IN_TEXTS.SignInPage
 
 export const metadata: Metadata = {
-  title: SIGN_IN_PAGE_TEXTS.meta.title,
-  description: SIGN_IN_PAGE_TEXTS.meta.description,
+  title: pageTexts.meta.title,
+  description: pageTexts.meta.description,
 }
 
 export default async function SignInPage() {
@@ -34,22 +32,20 @@ export default async function SignInPage() {
             className='w-28'
           />
           <div className='text-sm'>
-            {SIGN_IN_PAGE_TEXTS.notRegistered}{' '}
-            <NavLink href={ROUTES.auth.signUp}>
-              {SIGN_IN_PAGE_TEXTS.signUpLink}
-            </NavLink>
+            {pageTexts.notRegistered}{' '}
+            <NavLink href={ROUTES.auth.signUp}>{pageTexts.signUpLink}</NavLink>
           </div>
         </header>
 
         <h1 className='text-center text-3xl font-bold text-foreground-hard max-sm:text-center'>
-          {SIGN_IN_PAGE_TEXTS.title}
+          {pageTexts.title}
         </h1>
 
         <SignInForm />
 
         <div className='relative'>
           <p className='relative z-10 mx-auto w-fit bg-background px-2 text-xs font-medium uppercase leading-none text-foreground-support'>
-            {SIGN_IN_PAGE_TEXTS.continueWith}
+            {pageTexts.continueWith}
           </p>
           <hr className='absolute top-[0.3rem] w-full border-border' />
         </div>
@@ -59,7 +55,7 @@ export default async function SignInPage() {
       <div className='relative overflow-hidden bg-primary max-md:h-96 max-sm:h-48 md:flex-1'>
         <Image
           src={signInImage}
-          alt={SIGN_IN_PAGE_TEXTS.imageAlt}
+          alt={pageTexts.imageAlt}
           className='absolute size-full object-cover'
           placeholder='blur'
           priority

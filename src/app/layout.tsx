@@ -3,6 +3,7 @@ import './globals.css'
 import { Metadata } from 'next'
 
 import { ThemeToggle } from '@/components/theme-toggle'
+import { Toaster } from '@/components/ui/toast'
 import { inter, raleway } from '@/lib/fonts'
 import texts from '@/locales/pt-BR.json'
 
@@ -35,6 +36,7 @@ export default function RootLayout({
           <div className='fixed bottom-2 left-2 z-50'>
             <ThemeToggle />
           </div>
+          <Toaster />
         </Providers>
       </body>
     </html>
